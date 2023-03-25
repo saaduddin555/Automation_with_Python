@@ -1159,6 +1159,596 @@ https://www.digitalocean.com/community/tutorials/understanding-boolean-logic-in-
 We can use the concept of branching to have our code alter its execution sequence depending on the values of variables. We can use an if statement to evaluate a comparison. We start with the if keyword, followed by our comparison. We end the line with a colon. The body of the if statement is then indented to the right. If the comparison is True, the code inside the if body is executed. If the comparison evaluates to False, then the code block is skipped and will not be run.
 
 
+def hint_username(username):
+    if len(username) < 3:
+    print("Invalid username. Must be at least 3 characters long")
+
+What if if we want to print username is Valid
+
+def hint_username(username):
+    if len(username) < 3:
+        print("Invalid username. Must be at least 3 characters long")
+    else:
+        print(Valid username")
+    
+Ex:
+
+The is_positive function should return True if the number received is positive and False if it isn't. Can you fill in the gaps to make that happen?
+
+def is_positive(number):
+  if number > 0:
+    return True
+  else:
+    return False                           
+
+Output:
+is_positive(-5) returned False
+is_positive(0) returned False
+is_positive(13) returned True
+
+
+How to check even or Odd Number?
+
+def is_even(number):
+    if number % 2 == 0:
+        return True
+    return False
+
+else Statements and the Modulo Operator
+We just covered the if statement, which executes code if an evaluation is true and skips the code if it’s false. But what if we wanted the code to do something different if the evaluation is false? We can do this using the else statement. The else statement follows an if block, and is composed of the keyword else followed by a colon. The body of the else statement is indented to the right, and will be executed if the above if statement doesn’t execute.
+
+We also touched on the % modulo operator, which is represented by the percent sign: %. This operator performs integer division, but only returns the remainder of this division operation. If we’re dividing 5 by 2, the quotient is 2, and the remainder is 1. Two 2s can go into 5, leaving 1 left over. So 5%2 would return 1. Dividing 10 by 5 would give us a quotient of 2 with no remainder, since 5 can go into 10 twice with nothing left over. In this case, 10%2 would return 0, as there is no remainder.
+
+
+
+elif Statements:
+
+Complex Branching with elif Statements
+Building off of the if and else blocks, which allow us to branch our code depending on the evaluation of one statement, the elif statement allows us even more comparisons to perform more complex branching. Very similar to the if statements, an elif statement starts with the elif keyword, followed by a comparison to be evaluated. This is followed by a colon, and then the code block on the next line, indented to the right. An elif statement must follow an if statement, and will only be evaluated if the if statement was evaluated as false. You can include multiple elif statements to build complex branching in your code to do all kinds of powerful things!
+
+Difference in if and elif statements:
+
+def hint_username(username):
+    if len(username) < 3:
+        print ("Invalid username. Must be at least 3 charecters long")
+    else:
+        print("Valid username")
+---
+
+def hint_username(username):
+    if len(username) < 3:
+        print ("Invalid username. Must be at least 3 charecters long")
+    else:
+        if len(username) > 15:
+            print("Invalid username. Must be at most 15 charecters long")
+        else:
+            print("Valid username")
+
+The above code is nested and hard to read, we use elif block instead of writing two if conditions as below.
+
+Adding elif block to the code:
+
+def hint_username(username):
+    if len(username) < 3:
+        print ("Invalid username. Must be at least 3 charecters long")
+    elif len(username) > 15:
+        print("Invalid username. Must be at most 15 charecters long")
+    else:
+        print("Valid username")
+---
+
+Syntax of an if-elif-else block
+
+if condition1:
+    action1
+elif condition2:
+    action2
+else:
+    action3
+
+If condition1 is True:
+
+Then perform action1 and exit if-elif-else block
+
+If condition2 is True:
+
+Then perform action2 and exit if-elif-else block
+
+If neither condition1 nor condition2 are True:
+
+Then perform action3 and exit if-elif-else block
+
+
+
+Coding skills
+Skill Group 1
+
+Use a comparison operator with numbers
+
+Use a comparison operator to alphabetize strings
+
+# The value of 10*4 (40) is greater than 14+23 (37), therefore this 
+# comparison expression will return the Boolean value of True.
+
+
+print(10*4 > 14+23) # Should print True
+
+# The letter "t" has a Unicode value of 116 and the letter "s" has a
+# Unicode value of 115. Since 116 is not less than 115, the 
+# comparison of "tall" < "short" (or 116 < 115) is False. 
+
+print("tall" < "short")  # Should print False
+
+
+Skill Group 2
+
+Use a function with the def() keyword
+
+Pass a parameter to the function
+
+Use an if-elif-else statement
+
+Assign strings to variables 
+
+Use conditional operators
+
+Return a value
+
+
+Code:
+
+# This function accepts one variable as a parameter
+def translate_error_code(error_code):
+ 
+# The if-elif-else block assesses the value of the variable
+# passed to the function as a parameter. The if statement uses 
+# the equality operator == to test the value of the variable.
+# This test returns a Boolean (True/False) result.
+    if error_code == "401 Unauthorized":
+# If the comparison above returns True, then the indented 
+# line(s) inside the if-statement will run. In this case, the
+# action is to assign a string to the translation variable.
+# The remainder of the if-elif-else block will not run.
+# The Python interpreter will skip to the next line outside of 
+# the if-elif-else block. In this case, the next line is the 
+# return value statement.  
+        translation = "Server received an unauthenticated request"
+ 
+# If the initial if-statement returns a False result, then the
+# first elif-statement will run a different test on the value
+# of the variable.
+    elif error_code == "404 Not Found":
+# If the first elif-statement returns a True result, then the
+# indented line(s) inside the first elif-statement will run. 
+# After this line, the remainder of the if-elif-else block will
+# not run. The Python interpreter will skip to the next line
+# outside of the if-elif-else block. 
+        translation = "Requested web page not found on server"
+ 
+# If both the initial if-statement and the first elif-statement 
+# return a False result, then the second elif-statement will
+# run.
+    elif error_code == "408 Request Timeout":
+# If the second elif-statement returns a True result, then the
+# indented line(s) inside the second elif-statement will run. 
+# After this line, the remainder of the if-elif-else block will
+# not run. The Python interpreter will skip to the next line
+# outside of the if-elif-else block. 
+        translation = "Server request to close unused connection"
+ 
+# If the conditional tests above do not produce a True result
+# then the else-statement will run. 
+    else:
+        translation = "Unknown error code"
+# The if-elif-else block ends.
+
+# The next line outside of the if-elif-else block will run
+# after exiting the block. In this case, the next line returns
+# the output from the if-elif-else block.
+    return translation
+
+# The print() function allows us to display the output of the
+# function. To call a function in a print statement, the syntax
+# is print(name_of_function(parameter))
+print(translate_error_code("404 Not Found"))
+
+# Expected output:
+# Requested web page not found on server
+---
+
+Skill Group 3
+
+Use an if-elif-else statement with:
+
+comparison operators
+
+logical operators
+
+Code:
+
+# Sets value of the "number" variable
+number = 25
+
+# The "number" variable will first be compared to 5. Since it is 
+# False that "number" is not less than or equal to 5, the expression indented 
+# under this line will be ignored. 
+if number <= 5: 
+   print("The number is 5 or smaller.")
+ 
+# Next, the "number" variable will be compared to 33. Since it is 
+# False that "number" is equal to 33, the expression indented under 
+# this line will be ignored. 
+elif number == 33:
+   print("The number is 33.")
+ 
+# Then, the "number" variable will be compared to 32 and 6. Since it 
+# is True that 25 is less than 32 and greater than 6, the Python 
+# interpreter will print "The number is less than 32 and/or greater
+# than 6." Then, it will exit the if-elif-else statement and the remainder 
+# of the if-elif-else statement will be ignored.
+elif number < 32 and number >= 6:
+   print("The number is less than 32 and greater than 6.")
+ 
+else:
+   print("The number is " + str(number))
+ 
+# Expected output is: 
+# The number is less than 32 and greater than 6.
+---
+
+Skill Group 4
+
+Use an if statement to calculate a return value
+
+Use conditional operators
+
+Recall the arithmetic operators // and %
+
+code:
+
+# This function rounds a variable number up to the nearest 10x value
+def round_up(number):
+  x = 10
+# The floor division operator will calculate the integer value of
+# "number" divided by x: 35 // 10 will return the integer 3.
+  whole_number = number // x
+# The modulo operator will calculate the remainder value of "number"
+# divided by x: 35 % 10 will return the remainder value 5.
+  remainder = number % x
+# If the remainder is greater than 0: 
+  if remainder >= 5: 
+# Return x multiplied by the (whole_number+1) to round up
+    return x*(whole_number+1)
+# Else, return x multiplied by the whole_number to round down
+  return x*whole_number
+ 
+# Calls the function with the parameter value of 35.
+print(round_up(35)) # Should print 40
+---
+
+Practice Quiz:
+
+Question 2
+Complete the script by filling in the missing parts. The function receives a name, then returns a greeting based on whether or not that name is "Taylor".
+
+def greeting(name):
+  if greeting == "Taylor":
+    return "Welcome back Taylor!"
+  else:
+    return "Hello there, " + name
+
+print(greeting("Taylor"))
+print(greeting("John"))
+
+Output:
+Hello there, Taylor
+Hello there, John
+
+
+What’s the output of this code if number equals 10?
+
+if number > 11: 
+  print(0)
+elif number != 10:
+  print(1)
+elif number >= 20 or number < 12:
+  print(2)
+else:
+  print(3)
+
+Ans: 2
+
+
+Question 4
+Is "A dog" smaller or larger than "A mouse"? Is 9999+8888 smaller or larger than 100*100? Replace the plus sign in the following code to let Python check it for you and then answer. 
+
+
+print("A dog" + "A mouse")
+print(9999+8888 + 100*100)
+
+we can do like this:
+
+print("A dog" < "A mouse")
+print(9999+8888 > 100*100)
+
+Options to choose:
+
+"A dog" is larger than "A mouse" and 9999+8888 is larger than 100*100
+
+
+"A dog" is smaller than "A mouse" and 9999+8888 is larger than 100*100    
+
+
+"A dog" is larger than "A mouse" and 9999+8888 is smaller than 100*100
+
+
+"A dog" is smaller than "A mouse" and 9999+8888 is smaller than 100*100
+
+
+
+Ans:  "A dog" is smaller than "A mouse" and 9999+8888 is larger than 100*100  
+
+Question 5
+If a filesystem has a block size of 4096 bytes, this means that a file comprised of only one byte will still use 4096 bytes of storage. A file made up of 4097 bytes will use 4096*2=8192 bytes of storage. Knowing this, can you fill in the gaps in the calculate_storage function below, which calculates the total number of bytes needed to store a file of a given size?
+
+
+def calculate_storage(filesize):
+    block_size = 4096
+    # Use floor division to calculate how many blocks are fully occupied
+    full_blocks = ___
+    # Use the modulo operator to check whether there's any remainder
+    partial_block_remainder = ___
+    # Depending on whether there's a remainder or not, return
+    # the total number of bytes required to allocate enough blocks
+    # to store your data.
+    if partial_block_remainder > 0:
+        return ___
+    return ___
+
+print(calculate_storage(1))    # Should be 4096
+print(calculate_storage(4096)) # Should be 4096
+print(calculate_storage(4097)) # Should be 8192
+print(calculate_storage(6000)) # Should be 8192
+---
+
+Study Guide: Week 2 Graded Quiz
+It is time to prepare for the Week 2 graded quiz. Please review the following items from this week before starting the Week 2 Graded Quiz. If you would like to refresh your memory on these materials, please revisit the Study Guides located before each Practice Quiz in Week 2 : Study Guide: Expressions and Variables, Study Guide: Functions, and Study Guide: Conditionals.  
+
+Knowledge  
+How to assign values to variables and use them in code
+
+How to construct a function and use function parameters
+
+How comparison and logical operators can be used, 
+
+How comparison and logical operators behave with different data types
+
+What type of results simple and complex comparisons produce
+
+How to alphabetize strings using comparison operators
+
+What must appear after the if and elif keywords
+
+What the elif keyword does 
+
+When an if,  elif, or else-statement will execute
+
+How to use the floor division //  and modulo % operators and why
+
+How to use logical operators with comparison operators to develop complex conditional statements within an if-elif-else block
+
+Best practices for coding and their benefits
+
+What “self-documenting code” means
+
+
+There may be a few questions on the quiz that will ask you about either the output of a small block of code or the value of part of the code. Make sure to read the instructions carefully on those questions.
+
+
+Coding skills
+Skill Group 1
+Use a function with the def() keyword
+
+Pass a parameter to the function
+
+Use an if-elif-else block to set specific conditions for a variety of actions
+
+Assign strings to variables 
+
+Use comparison operators
+
+Return a value
+
+Call the function in a print statement and pass parameter to the function
+
+# A function is created with the def() keyword. The parameter
+# variable "time_as_string" is passed to the function through a 
+# call to the function.
+def task_reminder(time_as_string):
+
+    # The following if-elif-else block assigns various strings to
+    # the variable "task" depending on specific conditions. The
+    # test conditions are set using the == equality comparison 
+    # operator. In this case, the time passed through the 
+    # "time_as_string" parameter variable is tested as the 
+    # specific condition. So, if the time  is "11:30 a.m.", then 
+    # "task" is assigned the value: "Run TPS report".
+    if time_as_string == "8:00 a.m.":
+        task = "Check overnight backup images"
+    elif time_as_string == "11:30 a.m.":
+        task = "Run TPS report"
+    elif time_as_string == "5:30 p.m.":
+        task = "Reboot servers"
+    # The else statement is a catchall for all other values of 
+    # the "time_as_string" parameter variable not listed in the
+    # if-elif block of code.
+    else:
+        task = "Provide IT Support to employees"
+
+    # This line returns the value of "task" to the function call.
+    return task
+
+# This line calls the function and passes a parameter  
+# ("10:00 a.m.") to the function.
+print(task_reminder("10:00 a.m."))
+# Should print "Provide IT Support to employees"
+
+
+
+
+
+Skill Group 2
+Predict the output of expressions written with Python’s syntax. 
+
+Requires an understanding of:
+
+Arithmetic and logical operators 
+
+How functions return and print values
+
+How if-elif-else statements work
+
+Comparison operators
+
+# Example 1
+# Evaluate the output of this print statement
+
+def product(a, b):
+        return(a*b)
+
+print(product(product(2,4), product(3,5)))
+ 
+#################################
+
+# Example 2 
+# Evaluate the output of this print statement
+
+def difference(a, b):
+        return(a-b)
+
+def sum(a, b):
+        return(a+b)
+
+print(difference(sum(2,2), sum(3,3)))
+
+
+#################################
+
+
+# Example 3
+# Evaluate the Boolean output of this comparison
+
+
+print((5 >= 2*4) and (5 <= 4*3))
+
+
+#################################
+
+
+# Example 4 
+# Evaluate the value of the comparison in the if statement 
+
+
+x = 3
+if x+5 > x**2 or x % 4 != 0:
+        print("This comparison is True")
+
+
+#################################
+
+
+# Example 5 
+# Evaluate the output of this if-elif-else statement
+
+
+number = 6
+if number * 2 < 14:
+        print(number * 6 % 3)
+elif number > 7:
+        print(100 / number)
+else:
+        print(7 - number)
+
+
+# Click Run to check your answers. If you are having trouble 
+# calculating the correct answers manually, please review the
+# Practice Quiz Study Guides, videos, and readings in this Module.
+---
+
+
+Skill Group 3
+Create an if-elif-else statement with: 
+
+a complex conditional statement using both comparison and logical operators
+
+values assigned to variables 
+
+arithmetic operators, including the modulo % operator
+
+
+def get_remainder(x, y):
+ 
+  if x == 0 or y == 0 or x ==y:
+    remainder = 0
+  else:
+    remainder = (x % y) / y
+  return remainder
+
+
+print(get_remainder(10, 3))
+---
+
+
+Reminder: Correct syntax is critical
+Using precise syntax is critical when writing code in any programming language, including Python. Even a small typo can cause a syntax error and the automated Python-coded quiz grader will mark your code as incorrect. This reflects real life coding errors in the sense that a single error in spelling, case, punctuation, etc. can cause your code to fail. Coding problems caused by imprecise syntax will always be an issue whether you are learning a programming language or you are using programming skills on the job. So, it is critical to start the habit of being precise in your code now. 
+
+No credit will be given if there are any coding errors on the automated graded quizzes - including minor errors. Fortunately, you have 3 optional retake opportunities on the graded quizzes in this course. Additionally, you have unlimited retakes on practice quizzes and can review the videos and readings as many times as you need to master the concepts in this course.  
+
+Now, before starting the graded quiz, please review this list of common syntax errors coders make when writing code.
+
+Common syntax errors:
+Misspellings
+
+Incorrect indentations
+
+Missing or incorrect key characters:
+
+Parenthetical types - ( curved ), [ square ], { curly }
+
+Quote types - "straight-double" or 'straight-single', “curly-double” or ‘curly-single’
+
+Block introduction characters, like colons - :
+
+Data type mismatches
+
+Missing, incorrectly used, or misplaced Python reserved words
+
+Using the wrong case (uppercase/lowercase) - Python is a case-sensitive language
+---
+
+# Week 2 Final Quiz 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
