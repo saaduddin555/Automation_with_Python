@@ -3,27 +3,28 @@ Python Crash Course of IT Automation, Week 1 and Week2 Notes.
 # Week_1
 
 Key Terms:
-Programming code - Programming code is a set of written computer instructions, guided by rules, using a computer programming language. It might help to think of the computer instructions as a detailed, step-by-step recipe for performing tasks. The instructions tell computers and machines how to perform an action. Programming code may also be referred to as source code or scripts.
 
-Programming languages - Programming languages are similar to human spoken languages in that they both use syntax and semantics. Programming languages are used to write computer programs.  Some common programming languages include Python, Java, C, C++, C#, and R.
+ Programming code - Programming code is a set of written computer instructions, guided by rules, using a computer programming language. It might help to think of the computer instructions as a detailed, step-by-step recipe for performing tasks. The instructions tell computers and machines how to perform an action. Programming code may also be referred to as source code or scripts.
 
-Syntax - Syntax is a set of rules for how statements are constructed in both human and computer languages. Programming syntax includes rules for the order of elements in programming instructions, as well as the use of special characters and their placements in statements. This concept is similar to the syntax rules for grammar and punctuation in human language.
+ Programming languages - Programming languages are similar to human spoken languages in that they both use syntax and semantics. Programming languages are used to write computer programs.  Some common programming languages include Python, Java, C, C++, C#, and R.
 
-Semantics - Semantics refers to the intended meaning or effect of statements, or collections of words, in both human and computer languages. Semantic errors are also referred to as logical errors.
+ Syntax - Syntax is a set of rules for how statements are constructed in both human and computer languages. Programming syntax includes rules for the order of elements in programming instructions, as well as the use of special characters and their placements in statements. This concept is similar to the syntax rules for grammar and punctuation in human language.
 
-Computer program - A computer program is a step-by-step list of instructions that a computer follows to reach an intended goal. It is important to be clear and precise about the actions a computer program is supposed to perform because computers will do exactly what they are instructed to do. Computer programs can be long, complex, and accomplish a variety of tasks. They are often developed by computer programmers and software engineers, but anyone can learn to create them. Computer programs may involve a structured development cycle. They can be written in a wide variety of programming languages, such as Python, Java, C++,  R, and more. The completed format of a program is often a single executable file.
+ Semantics - Semantics refers to the intended meaning or effect of statements, or collections of words, in both human and computer languages. Semantic errors are also referred to as logical errors.
 
-Script - Scripts are usually shorter and less complex than computer programs. Scripts are often used to automate specific tasks. However, they can be used for complex tasks if needed. Scripts are often written by IT professionals, but anyone can learn to write scripts. Scripts have a shorter, less structured development cycle as compared to the development of complex computer programs and software. Scripts can be written in a variety of programming languages, like Python, Javascript, Ruby, Bash, and more. Some scripting languages are interpreted languages and are only compatible with certain platforms.
+ Computer program - A computer program is a step-by-step list of instructions that a computer follows to reach an intended goal. It is important to be clear and precise about the actions a computer program is supposed to perform because computers will do exactly what they are instructed to do. Computer programs can be long, complex, and accomplish a variety of tasks. They are often developed by computer programmers and software engineers, but anyone can learn to create them. Computer programs may involve a structured development cycle. They can be written in a wide variety of programming languages, such as Python, Java, C++,  R, and more. The completed format of a program is often a single executable file.
 
-Automation - Automation is used to replace a repetitive manual step with one that happens automatically. 
+ Script - Scripts are usually shorter and less complex than computer programs. Scripts are often used to automate specific tasks. However, they can be used for complex tasks if needed. Scripts are often written by IT professionals, but anyone can learn to write scripts. Scripts have a shorter, less structured development cycle as compared to the development of complex computer programs and software. Scripts can be written in a variety of programming languages, like Python, Javascript, Ruby, Bash, and more. Some scripting languages are interpreted languages and are only compatible with certain platforms.
 
-Output - Output is the end result of a task performed by a function or computer program. Output can include a single value, a report, entries into a database, and more. 
+ Automation - Automation is used to replace a repetitive manual step with one that happens automatically. 
 
-Input - Input is information that is provided to a program by the end user. Input can be text, voice, images, biometrics, and more.   
+ Output - Output is the end result of a task performed by a function or computer program. Output can include a single value, a report, entries into a database, and more. 
 
-Functions - A function is a reusable block of code that performs a specific task.
+ Input - Input is information that is provided to a program by the end user. Input can be text, voice, images, biometrics, and more.   
 
-Variables - Variables are used to temporarily store changeable values in programming code. 
+ Functions - A function is a reusable block of code that performs a specific task.
+
+ Variables - Variables are used to temporarily store changeable values in programming code. 
 print ("I'm programming in Python!")
 ---
 
@@ -31,55 +32,57 @@ A Note on Syntax and Code Blocks
 When writing code, using correct syntax is critical. Even a small typo, like a missing parenthesis bracket or an extra comma, can cause a syntax error and the code won't execute at all. If your code results in an error or an exception, pay close attention to syntax and watch out for minor mistakes. A single wrong character could take hours to identify in long code so it is important to be mindful of syntax when writing code. 
 
 Common syntax errors:
-Misspellings
 
-Incorrect indentations
+  . Misspellings
 
-Missing or incorrect key characters:
+  . Incorrect indentations
 
-Bracket types - ( curved ), [ square ], { curly }
+  . Missing or incorrect key characters:
 
-Quote types - "straight-double" or 'straight-single', “curly-double” or ‘curly-single’
+        . Bracket types - ( curved ), [ square ], { curly }
 
-Block introduction characters, like colons - :
+        . Quote types - "straight-double" or 'straight-single', “curly-double” or ‘curly-single’
 
-Data type mismatches
+        . Block introduction characters, like colons - :
 
-Missing, incorrectly used, or misplaced Python reserved words
+  . Data type mismatches
 
-Using the wrong case (uppercase/lowercase) - Python is a case-sensitive language 
+  . Missing, incorrectly used, or misplaced Python reserved words
+
+  . Using the wrong case (uppercase/lowercase) - Python is a case-sensitive language 
 
 If your syntax is correct, but the script has unexpected behavior or output, this may be due to a semantic problem. Syntax is like the vocabulary, grammar, spelling, and punctuation of code. Semantics are the meaning and logic of coded statements. It is possible to have syntactically correct code that runs successfully, but doesn't do what we want it to do.
 
 Common semantic errors:
-Creating functional code, but getting unintentional output
+   . functional code, but getting unintentional output
 
-Poor logic structures in the design of the code
+   . Poor logic structures in the design of the code
 
 When working with the code blocks in exercises for this course, be mindful of syntax and semantic (logic) errors, along with the overall result of your code. Just because you fixed an error doesn't mean that the code will have the desired effect when it runs! Once you’ve fixed an error in your code, don't forget to click Run to check your work.
 ---
 
-Study Guide: First Programming Concepts
+Study Guide: First Programming Concepts:
+
 This study guide provides a quick-reference summary of what you learned in this lesson and serves as a guide for the upcoming practice quiz.  
 
-Functions 
+Functions:
+
 A function is a piece of code that performs a unit of work. In the examples you've seen so far, you have only encountered the print() function, which outputs a message to the screen. You will use this function frequently in this course to check the results of your code. The syntax of the print() function is modeled in the example below. 
 
-123
-#Syntax for printing a string of text. Click Run to check the result.
 
+# Syntax for printing a string of text. Click Run to check the result.
 print("Hello world!")
-Reset
-Keywords
+
+Keywords: 
 A keyword is a reserved word in a programming language that performs a specific purpose. In your first Python example, you briefly encountered the keywords for and in.  Note that keywords will often appear in bold in this course. 
 
 In the next few weeks, you will also learn the following keywords:
 
-Values: True, False, None
-Conditions: if, elif, else
-Logical operators: and, or, not
-Loops: for, in, while, break, continue
-Functions: def, return  
+    Values: True, False, None
+    Conditions: if, elif, else
+    Logical operators: and, or, not
+    Loops: for, in, while, break, continue
+    Functions: def, return  
 
 You don't need to learn this whole list now. We'll dive into each keyword as we encounter them. There are additional reserved keywords in Python. If you would like to read about them, please visit the linked “Python Keywords” article in the Resources section at the end of this study guide. 
 
@@ -108,58 +111,130 @@ Multiplication * and Division /
 
 Addition + and Subtraction -    
 
- You might find the PEMDAS mnemonic device to be helpful in remembering the order.   
+You might find the PEMDAS mnemonic device to be helpful in remembering the order.   
 
+Resources for more information:
 
-Resources for more information
 For more information about the concepts covered in this reading, please visit:
+     Built-in Functions - Lists and summarizes Python’s built-in functions.
 
-Built-in Functions - Lists and summarizes Python’s built-in functions.
+    Python Keywords - Lists Python’s reserved keywords and a brief description of what each keyword does.
 
-Python Keywords - Lists Python’s reserved keywords and a brief description of what each keyword does.
-
-Different Arithmetic operators in Python - Provides more examples of the proper syntax for using arithmetic operators in Python.
+    Different Arithmetic operators in Python - Provides more examples of the proper syntax for using arithmetic operators in Python.
 ---
-Syntax for printing a string of text. Click Run to check the result.
+
+Study Guide: Week 1 Graded Quiz
+Study Guide: Week 1 Graded Assessment
+
+Knowledge
+ .Benefits of the Python programming language
+
+ . Python compares to other programming languages
+
+ .How the knowledge of one programming language affects learning and using other programming languages
+
+ .How scripting applies to automation
+
+ .Proper syntax for arithmetic operations
+
+ . and keywords used to display data 
+
+ .Why precision is important when programming computer instructions
+
+
+Coding skills:
+
+Skill 1
+
+    . Use the print() function to output a string 
+
+# Syntax for printing a string of text
+print("I love Python!")
+
+
+# Syntax for printing numeric values
+print(360)
+print(32*45)
+
+
+# Syntax for printing the value of a variable
+value = 8*6
+print(value)
+
+
+# Syntax for printing a string of text. Click Run to check the result.
 
 print("Hello world!")
 
 Examples of Python code:
 
 print (2+10)
-To add 2 and 10 we define as above
+# To add 2 and 10 we define as above
 
 print (2-10)
-To subtract 2 and 10 we define as above
+# To subtract 2 and 10 we define as above
 
 print (2/10)
-To divide 2 times of 10 we define as above
+# To divide 2 times of 10 we define as above
 
 print (2*10)
-To Multiple 2 times of 10 we define as above
+# To Multiple 2 times of 10 we define as above
 
 print (2**10)
-To define power 2 to power of 10, we write syntax as above
+# To define power 2 to power of 10, we write syntax as above
 
 print (-2/-10)
-we can use negetive and postive values and write code to get output
+# we can use negetive and postive values and write code to get output
 
 print (((1+2)*3)/4)
 we can combine multiple operators such as add subract divide multiple in a single expression as above and get result
 Here the () the parantheses is used to segreegate the values from one another and get desired output as above example.
 
-Syntax for printing a string of text
+# Syntax for printing a string of text
 print("I love Python!")
 
 
-Syntax for printing numeric values
+# Syntax for printing numeric values
 print(360)
 print(32*45)
 
 
-Syntax for printing the value of a variable
+# Syntax for printing the value of a variable
 value = 8*6
 print(value)
+
+
+Skill 2
+Use arithmetic operators, with a focus on exponents
+
+# Multiplication, division, addition, and subtraction
+print(3*8/2+5-1)
+ 
+# Exponents
+print(4**6) # Syntax means 4 to the power of 6
+print(4**2) # To square a number
+print(4**3) # To cube a number
+print(4**0.5) # To find the square root of a number
+
+# To calculate how many different possible combinations can be
+# formed using a set of "x" characters with each character in "x"
+# having "y" number of possible values, you will need to use an 
+# exponent for the calculation:
+x = 4
+y = 26
+print(y**x)
+
+Skill 3
+Use variables with assignment and arithmetic operators
+
+# Assignment of values to the variables:
+years = 10
+weeks_in_a_year = 52
+# This variable is assigned an arithmetic calculation:
+weeks_in_a_decade = years * weeks_in_a_year
+# Prints the calculation stored in the "weeks_in_a_decade" variable:
+print(weeks_in_a_decade)
+---
 
 Question 1
 What are functions in Python?
@@ -322,39 +397,39 @@ This study guide provides a quick-reference summary of what you learned in this 
 In the Expressions and Variables segment, you learned about expressions, variables, and the data types: string, integer, and float. You learned how to convert a value from one data type to another and you learned how to resolve a few common errors in Python.
 
 Terms
-expression - a combination of numbers, symbols, or other values that produce a result when evaluated
+    expression - a combination of numbers, symbols, or other values that produce a result when evaluated
 
-data types - classes of data (e.g., string, int, float, Boolean, etc.), which include the properties and behaviors of instances of the data type (variables)
+    data types - classes of data (e.g., string, int, float, Boolean, etc.), which include the properties and behaviors of instances of the data type (variables)
 
-variable - an instance of a data type class, represented by a unique name within the code, that stores changeable values of the specific data type
+    variable - an instance of a data type class, represented by a unique name within the code, that stores changeable values of the specific data type
 
-implicit conversion - when the Python interpreter automatically converts one data type to another
+    implicit conversion - when the Python interpreter automatically converts one data type to another
 
-explicit conversion - when code is written to manually convert one data type to another using a data type conversion function:
+    explicit conversion - when code is written to manually convert one data type to another using a data type conversion function:
 
-str() - converts a value (often numeric) to a string data type
+    str() - converts a value (often numeric) to a string data type
 
-int() - converts a value (usually a float) to an integer data type
+    int() - converts a value (usually a float) to an integer data type
 
-float() - converts a value (usually an integer) to a float data type
+    float() - converts a value (usually an integer) to a float data type
 
  
 
 Coding skills
 Skill Group 1
 
-Use the assignment operator =  to assign values to variables
+. Use the assignment operator =  to assign values to variables
 
-Use basic arithmetic operators with variables to create expressions
+. Use basic arithmetic operators with variables to create expressions
 
-Use explicit conversion to change a data type from float to string
+. Use explicit conversion to change a data type from float to string
 
   
 Eg:
 
-* The following lines assign the variable to the left of the = 
-  assignment operator with the values and arithmetic expressions 
-  on the right side of the = assignment operator.
+# The following lines assign the variable to the left of the = 
+# assignment operator with the values and arithmetic expressions 
+# on the right side of the = assignment operator.
 
 hotel_room = 100
 tax = hotel_room * 0.08
@@ -362,21 +437,21 @@ total = hotel_room + tax
 room_guests = 4
 share_per_person = total/room_guests 
  
-* This line outputs the result of the final calculation stored
-in the variable "share_per_person"
+# This line outputs the result of the final calculation stored
+# in the variable "share_per_person"
 print("Each person needs to pay: " + str(share_per_person)) # change a data type
 
 
 
 Skill Group 2
 
-Output multiple string variables on a single line to form a sentence
+. Output multiple string variables on a single line to form a sentence
 
-Use the plus (+) connector or a comma to connect strings in a print() function
+. Use the plus (+) connector or a comma to connect strings in a print() function
 
-Create spaces between variables in  a print() function
+. Create spaces between variables in  a print() function
 
-* The following 5 lines assign strings to a list of variables.
+# The following 5 lines assign strings to a list of variables.
 salutation = "Dr."
 first_name = "Prisha"
 middle_name = "Jai"
@@ -384,40 +459,40 @@ last_name = "Agarwal"
 suffix = "Ph.D."
  
 print(salutation + " " + first_name + " " + middle_name + " " + last_name + ", " + suffix) 
-The comma as a string ", " adds the conventional use of a comma plus a 
-space to separate the last name from the suffix.
+# The comma as a string ", " adds the conventional use of a comma plus a 
+# space to separate the last name from the suffix.
  
-Alternatively, you could use commas in place of the + connector:
+# Alternatively, you could use commas in place of the + connector:
 print(salutation, first_name, middle_name, last_name,",", suffix)
 
-However, you will find that this produces a space before a comma within a string
+# However, you will find that this produces a space before a comma within a string
 
 Skill Group 3
-Resolve TypeError caused by a data type mismatch issue
-Use an explicit conversion function
+.  Resolve TypeError caused by a data type mismatch issue
+.  Use an explicit conversion function
 
 print("5 * 3 = " + str(5*3)) 
  
-* Resolution: 
-print("5 * 3 = " + str(5*3))
-To avoid a type error between the string and the integer within the
-print() function, you can make an explicit data type conversion by
-using the str() function to convert the integer to a string.  
+# Resolution: 
+# print("5 * 3 = " + str(5*3))
+# To avoid a type error between the string and the integer within the
+# print() function, you can make an explicit data type conversion by
+# using the str() function to convert the integer to a string.  
 
 Skill Group 4
-Resolve a ZeroDivisionError caused by an attempt to divide by 0
+. Resolve a ZeroDivisionError caused by an attempt to divide by 0
 
 numerator = 7
 denominator = 2   # Possible resolution: Change the denominator value 
 result = numerator / denominator
 print(result)
  
-One possible assumption for a number divided by zero error might
-include the issue of a null value as a denominator (could happen when
-using a loop to iterate over values in a database). In such cases, the
-desired outcome may be to leave the numerator value intact. The
-numerator value can be preserved by reassigning the denominator with 
-the integer value of 1. The result would then equal the numerator.
+# One possible assumption for a number divided by zero error might
+# include the issue of a null value as a denominator (could happen when
+# using a loop to iterate over values in a database). In such cases, the
+# desired outcome may be to leave the numerator value intact. The
+# numerator value can be preserved by reassigning the denominator with 
+# the integer value of 1. The result would then equal the numerator.
 ---
 
 * Functions in Python
@@ -593,34 +668,35 @@ The output is 78.5
 The above code is clear enough to understand.
 ---
 
-Study Guide: Functions
+Study Guide: Functions:
+
 This study guide provides a quick-reference summary of what you learned in this lesson and serves as a guide for the upcoming practice quiz.  
 
 In the Functions segment, you learned how to define and call functions, utilize a function’s parameters, and return data from a function. You also learned how to differentiate and convert between different data types utilizing variables. Plus, you learned a few best practices for writing reusable and readable code. 
 
 Terms
-return value - the value or variable returned as the end result of a function
+  . return value - the value or variable returned as the end result of a function
 
-parameter (argument) -  a value passed into a function for use within the function
+  . parameter (argument) -  a value passed into a function for use within the function
 
-refactoring code - a process to restructure code without changing functionality
+  . refactoring code - a process to restructure code without changing functionality
 
 Knowledge
-The purpose of the def() keyword is to define a new function. 
+    . The purpose of the def() keyword is to define a new function. 
 
-Best practices for writing code that is readable and reusable:
+    . Best practices for writing code that is readable and reusable:
 
-Create a reusable function - Replace duplicate code with one reusable function to make the code easier to read and repurpose.
+            Create a reusable function - Replace duplicate code with one reusable function to make the code easier to read and repurpose.
 
-Refactor code - Update code so that it is self-documenting and the intent of the code is clear.
+            Refactor code - Update code so that it is self-documenting and the intent of the code is clear.
 
-Add comments - Adding comments is part of creating self-documenting code. Using comments allows you to leave notes to yourself and/or other programmers to make the purpose of the code clear.
+            Add comments - Adding comments is part of creating self-documenting code. Using comments allows you to leave notes to yourself and/or other programmers to make the purpose of the code clear.
 
 Coding skills
 Skill Group 1
 
-Use a function that accepts multiple parameters
-Return a result value
+    . Use a function that accepts multiple parameters
+    . Return a result value
 
 # This function calculates the number of days in a variable number of 
 # years, months, and days. These variables are provided by the user and
@@ -639,31 +715,31 @@ print(find_total_days(2,5,23))
 
 Skill Group 2
 
-Use a function to return the result of a measurement conversion
-Use arithmetic operators to perform a calculation
-Combine text with a function call within a print() statement
-Convert the return value from a float data type to a string for the print() function
-Call the function and perform a calculation on the return value within a print() statement
+    . Use a function to return the result of a measurement conversion
+    . Use arithmetic operators to perform a calculation
+    . Combine text with a function call within a print() statement
+    . Convert the return value from a float data type to a string for the print() function
+    . Call the function and perform a calculation on the return value within a print() statement
 
-. This function converts fluid ounces to milliliters and returns the 
-. result of the conversion.
+# This function converts fluid ounces to milliliters and returns the 
+# result of the conversion.
 def convert_volume(fluid_ounce):
-. Calculate value of the "ml" variable using the parameter variable 
-. "fluid_ounce". There are approximately 29.5 milliliters in 1 fluid
-. ounce.
+# Calculate value of the "ml" variable using the parameter variable 
+# "fluid_ounce". There are approximately 29.5 milliliters in 1 fluid
+# ounce.
     ml = fluid_ounce * 29.5  
-. Return the result of the calculation.  
+# Return the result of the calculation.  
     return ml
  
-. Call the conversion from within the print() function using 2 fluid 
-. ounces. Convert the return value from a float to a string.  
+# Call the conversion from within the print() function using 2 fluid 
+# ounces. Convert the return value from a float to a string.  
 print("The volume in millimeters is " + str(convert_volume(2)))
  
-. Call the function again and double the 2 fluid ounces from within
-. the print function.
+# Call the function again and double the 2 fluid ounces from within
+# the print function.
 print("The volume in millimeters is " + str(convert_volume(2)*2))
-. Alternative calculation:
-. print("The volume in millimeters is " + str(convert_volume(4)))
+# Alternative calculation:
+# print("The volume in millimeters is " + str(convert_volume(4))
 
 
 Q1:
@@ -1260,12 +1336,13 @@ Then perform action3 and exit if-elif-else block
 
 
 
-Coding skills
+Coding skills:
+
 Skill Group 1
 
-Use a comparison operator with numbers
+    . Use a comparison operator with numbers
 
-Use a comparison operator to alphabetize strings
+    . Use a comparison operator to alphabetize strings
 
 # The value of 10*4 (40) is greater than 14+23 (37), therefore this 
 # comparison expression will return the Boolean value of True.
@@ -1280,19 +1357,19 @@ print(10*4 > 14+23) # Should print True
 print("tall" < "short")  # Should print False
 
 
-Skill Group 2
+Skill Group 2:
 
-Use a function with the def() keyword
+    . Use a function with the def() keyword
 
-Pass a parameter to the function
+    . Pass a parameter to the function
 
-Use an if-elif-else statement
+    . Use an if-elif-else statement
 
-Assign strings to variables 
+    . Assign strings to variables 
 
-Use conditional operators
+    . Use conditional operators
 
-Return a value
+    . Return a value
 
 
 Code:
@@ -1358,11 +1435,11 @@ print(translate_error_code("404 Not Found"))
 
 Skill Group 3
 
-Use an if-elif-else statement with:
+    . Use an if-elif-else statement with:
 
-comparison operators
+    . comparison operators
 
-logical operators
+    . logical operators
 
 Code:
 
@@ -1398,11 +1475,11 @@ else:
 
 Skill Group 4
 
-Use an if statement to calculate a return value
+    . Use an if statement to calculate a return value
 
-Use conditional operators
+    . Use conditional operators
 
-Recall the arithmetic operators // and %
+    . Recall the arithmetic operators // and %
 
 code:
 
@@ -1514,7 +1591,8 @@ print(calculate_storage(6000)) # Should be 8192
 Study Guide: Week 2 Graded Quiz
 It is time to prepare for the Week 2 graded quiz. Please review the following items from this week before starting the Week 2 Graded Quiz. If you would like to refresh your memory on these materials, please revisit the Study Guides located before each Practice Quiz in Week 2 : Study Guide: Expressions and Variables, Study Guide: Functions, and Study Guide: Conditionals.  
 
-Knowledge  
+Knowledge:
+
 How to assign values to variables and use them in code
 
 How to construct a function and use function parameters
@@ -1545,21 +1623,23 @@ What “self-documenting code” means
 There may be a few questions on the quiz that will ask you about either the output of a small block of code or the value of part of the code. Make sure to read the instructions carefully on those questions.
 
 
-Coding skills
+Coding skills:
+
 Skill Group 1
-Use a function with the def() keyword
 
-Pass a parameter to the function
+    . Use a function with the def() keyword
 
-Use an if-elif-else block to set specific conditions for a variety of actions
+    . Pass a parameter to the function
 
-Assign strings to variables 
+    . Use an if-elif-else block to set specific conditions for a variety of actions
 
-Use comparison operators
+    . Assign strings to variables 
 
-Return a value
+    . Use comparison operators
 
-Call the function in a print statement and pass parameter to the function
+    . Return a value
+
+    . Call the function in a print statement and pass parameter to the function
 
 # A function is created with the def() keyword. The parameter
 # variable "time_as_string" is passed to the function through a 
@@ -1594,21 +1674,19 @@ print(task_reminder("10:00 a.m."))
 # Should print "Provide IT Support to employees"
 
 
-
-
-
 Skill Group 2
-Predict the output of expressions written with Python’s syntax. 
 
-Requires an understanding of:
+    . Predict the output of expressions written with Python’s syntax. 
 
-Arithmetic and logical operators 
+    . Requires an understanding of:
 
-How functions return and print values
+    . Arithmetic and logical operators 
 
-How if-elif-else statements work
+    . How functions return and print values
 
-Comparison operators
+    . How if-elif-else statements work
+
+    . Comparison operators
 
 # Example 1
 # Evaluate the output of this print statement
@@ -1676,14 +1754,15 @@ else:
 ---
 
 
-Skill Group 3
-Create an if-elif-else statement with: 
+Skill Group 3:
 
-a complex conditional statement using both comparison and logical operators
+    . Create an if-elif-else statement with: 
 
-values assigned to variables 
+    . a complex conditional statement using both comparison and logical operators
 
-arithmetic operators, including the modulo % operator
+    . values assigned to variables 
+
+    . arithmetic operators, including the modulo % operator
 
 
 def get_remainder(x, y):
