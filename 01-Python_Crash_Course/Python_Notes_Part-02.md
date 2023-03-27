@@ -942,9 +942,72 @@ for ___:
 ---
 
 
-# Recusrsion
+# Recursion
 
 In computer science, recursion is a method of solving a computational problem where the solution depends on solutions to smaller instances of the same problem. Recursion solves such recursive problems by using functions that call themselves from within their own code.
+
+The recursion is a very common technique used in software engineering, it's not used that much in automation. Still, we think it's valuable for you to know about recursion and to have an idea of how to use it. You may see it in code written by others or you may face a problem where recursion is the best way to solve it. Recursion is the repeated application of the same procedure to a smaller problem. Have you ever played with a Russian nesting doll? They are a great visual example of recursion. Each doll has a smaller doll inside it. When you open up the doll to find the smaller one inside, you keep going until you reach the smallest doll which can't be opened. 
+
+Recursion lets us tackle complex problems by reducing the problem to a simpler one. Take our Russian nesting dolls, all nested inside each other. Imagine we want to find out how many dolls there are in total. We would need to open each doll one by one until we got to the last one and then count how many dolls we've opened. That's recursion in action. 
+
+Here's another example with a more complex problem. Imagine you're in a line of people and you want to know how many people are in front of you, and let me tell you I can't stand long lines. Anyway, if the line is long, it might be hard to count the people without leaving the line and losing your place. Instead you can ask the person in front of you how many people are in front of them. Since this person will be in the same situation as you, they'll have to ask the same question to the person in front of them and so on and so on until the question reaches the first person in the line. This person can confidently reply that there are no people in front of them. So then the second person in line can reply one, the person behind them replies two, and so on until the answer reaches you. Okay. I know the chances are pretty small that all of those people would play along just so you can know where you are in line, but it's a useful way to visualize how recursion works.
+
+ How does this translate into programming? Well, in programming, recursion is a way of doing a repetitive task by having a function call itself. A recursive function calls itself usually with a modified parameter until it reaches a specific condition. This condition is called the base case. In our earlier examples, the base case would be the smallest Russian doll or the person at the front of the queue. Let's check out an example of a recursive function to understand what we're talking about. 
+ 
+def factorial(n):
+    if n < 2:
+        return 1
+    return n * factorial(n-1)
+ 
+ Here, we're defining a function called factorial. At the beginning of the function, we have a conditional block defining the base case, [on screen] def factorial(n): where n is smaller than 2. [on screen] if n < 2: It simply returns the value 1. [on screen] return 1 After the base case, we have a line where the factorial function is calling itself with n minus 1. [on screen] return n * factorial(n-1) This is called the recursive case. This creates a loop. Each time the function is executed, it calls itself with a smaller number until it reaches the base case. Once it reaches the base case, it returns the value 1. Then the previously called function multiplies that by two and the previously called function multiplies it by three and so on. This loop will keep going until the first factorial function called returns the desired result. It's a bit complex. Let's add a few print statements to see exactly how this works.
+
+def factorial(n):
+    if n < 2:
+        return 1
+    return n * factorial(n-1)
+
+print(“Returning ” + str(result) + “ for factorial of ” + str(n)) return result So here we can see the function kept calling itself until it reached the base case. After that, each function returned the value of the previous function multiplied by n until the original function returned. Cool, huh? Next up, we're going to check out some more examples of when to use recursion and when it's best to avoid it.
+
+def factorial(n):
+    print("Factorial called with " + str(n))
+    if n < 2:
+        print("Returning 1")
+        return 1
+    result = n * factorial(n-1)
+    print("Returning " + str(result) + " for factorial of " + str(n))
+    return result
+
+factorial(4)
+
+
+* Recursion in Action in IT Context:
+
+By now you've seen what a recursive function looks like, how to write a base case and the recursive case. You might be wondering why do we need recursive functions if I can just use a for or while loop? Well, solutions to some specific problems are easier to write and understand when using recursive functions. A lot of math functions like the factorial or the sum of all the previous numbers are good examples of this. If a math function is already defined in recursive terms, it's straightforward to just write the code as a recursive function. But it's not just about math functions. Let's check out a couple of examples of how this could help an IT specialist trying to automate tasks. 
+
+Let's say that you need to write a tool that goes through a bunch of directories in your computer and calculates how many files are contained in each. When listing the files inside a directory, you might find subdirectories inside them and you'd want to count the files in those subdirectories as well. This is a great time to use recursion. The base case would be a directory with no subdirectories. For this case, the function would just return the amount of files. The recursive case would be calling the recursive function for each of the contained subdirectories. The return value of a given function call would be the sum of all the files in that directory plus all the files in the contained subdirectories. A directory of files that can contain other directories is an example of a recursive structure. Because directories can contain subdirectories that contain subdirectories that contain subdirectories, and so on. When operating over recursive structure, it's usually easier to use recursive functions than for or while loops. 
+
+Another IT-focused example of a recursive structure is anything that deals with groups of users that can contain other groups. We see this situation a lot when using administrative tools like active directory or LDAP. Say your group management software allows you to create groups that have both users and other groups as their members. And you want to list all human users that are part of a given group. Here you would use a recursive function to go through the groups. The base case would be a group that only includes users listing all of them. The recursive case would mean going through all the groups contained listing all the users in them and then listing any users contained in the current group.
+
+It's important to call out that in some languages there's a maximum amount of recursive calls you can use. In Python by default, you can call a recursive function 1,000 times until you reach the limit. That's fine for things like subdirectories or user groups that aren't thousands of levels deep. But it might not be enough for mathematical functions like the ones we saw in the last video. Let's go back to our factorial example from the last video and try to call it with n equals 1,000.
+
+Factorial(1000), See that error? It's telling us that we've reached the maximum limit for recursive calls. So while you can use recursion in a bunch of different scenarios, we only recommend using it when you need to go through a recursive structure that won't reach a thousand nested levels. All right, we've just added recursion to your growing scripting tool box. They're ready for you whenever the situation calls for it.
+
+
+Exercise:
+
+The function sum_positive_numbers should return the sum of all positive numbers between the number n received and 1. For example, when n is 3 it should return 1+2+3=6, and when n is 5 it should return 1+2+3+4+5=15. Fill in the gaps to make this work:
+
+def sum_positive_numbers(n):
+    # The base case is n being smaller than 1
+    if n < 1:
+        return ___
+
+    # The recursive case is adding this number to 
+    # the sum of the numbers smaller than this one.
+    return ___ + sum_positive_numbers(___)
+
+print(sum_positive_numbers(3)) # Should be 6
+print(sum_positive_numbers(5)) # Should be 15
 
 
 Additional Recursion Sources:
