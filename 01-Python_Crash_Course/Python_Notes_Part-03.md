@@ -1092,24 +1092,41 @@ You might be wondering why tuples are a thing, given how similar they are to lis
 
 * Iterating Over Lists and Tuples:
 
+When we covered for loops, we showed the example of iterating over a list. This lets you iterate over each element in the list, exposing the element to the for loop as a variable. But what if you want to access the elements in a list, along with the index of the element in question? You can do this using the enumerate() function. The enumerate() function takes a list as a parameter and returns a tuple for each element in the list. The first value of the tuple is the index and the second value is the element itself.
+
+EX:
+
+animals = ["lion", "zebra", "dolphin", "monkey"]
+chars = 0
+for animal in animals:
+    char += len(animals)
+
+print("Total characters: {}, average length: {}".format(chars, chars/len(animals)))
+
+Explanantion:In this code, we're iterating over a list of strings. For each of the strings, we get its length and add it to the total amount of characters. At the end we print the total and the average which we get by dividing the total by the length of the list. You can see we're using the len function twice, once to get the length of the string and then again to get the amount of elements in the list. What if you wanted to know the index of an element while going through the list? You could use the range function and then use indexing to access the elements at the index that range returned. You could use a range function and then use indexing to access the elements at the index that range just returned or you could just use the enumerate function.
+
+* Enumerate:
+
+winners = ["Ashley", "Dylan", "Reese"]
+for index, person in enumerate(winners):
+    print("{} - {}".format(index + 1, person))
 
 
+Winners equals, we'll make a list, Ashley, Dylan, and Reese and close the list for index, person in enumerate winners.print curly brackets dash curly brackets.format index plus one person.The enumerate function returns a tuple for each element in the list. The first value in the tuple is the index of the element in the sequence. The second value in the tuple is the element in the sequence. You're the real winner with the enumerate function. It does all the work for you.
 
+EX2:
 
+def full_emails(people):
+    result = []
+    for email, name in people:
+        result.append("{} <{}>".format(name, email))
+    return result
+print(full_emails([("mirza@gmail.com", "mirza"),("saad@gmai.com", "saad")]))
 
+Explananation:
+Say you have a list of tuples containing two strings each. The first string is an email address and the second is the full name of the person with that email address. You want to write a function that creates a new list containing one string per person including their name and the email address between angled brackets. the format usually used in emails like this. So what do we need to do?We'll start by defining a function that receives a list of people, def full_emails, takes the argument people.Remember, people is a list of tuples where the first element is the email address and the second one is the full name. So in our function, we'll first create the variable that we'll use as a return value which will be a list and we'll call it result. Result equals empty list. We'll then iterate over the list of people. We know this list contains tuples of two strings each. So we'll unpack the values directly when iterating in variables that we'll call email and name for email and name in people. Now, our result variable is a list and it should contain strings. So we'll append to the resulting string to the results list, result.append. The string that will append will be formatted in the way we want. To do that, we'll use the format method with the two variables of our iteration. So curly brackets, curly brackets.format, name, and email.Once we're done with the iteration, we'll return the list which should now contain all the necessary emails, return result.Will this work? What do you think? Let's try it out. Print full emails Alex@example.com, Alex Diego.Shay@example.com is the email and we'll call Shay Brandt as the name.Yes, this worked as expected. Before we move on, a quick word of caution about some common errors when dealing with lists in Python. Because we use the range function so much with for loops, you might be tempted to use it for iterating over indexes of a list and then to access the elements through indexing. You could be particularly inclined to do this if you're used to other programming languages before. Because in some languages, the only way to access an element of a list is by using indexes. Real talk, this works but looks ugly. It's more idiomatic in Python to iterate through the elements of the list directly or using enumerate when you need the indexes like we've done so far.
 
-
-
-
-
-
-
-
-
-
-
-
-Practice:
+* QUESTION:
 Try out the enumerate function for yourself in this quick exercise. Complete the skip_elements function to return every other element from the list, this time using the enumerate function to check if an element is in an even position or an odd position.
 
 def skip_elements(elements):
@@ -1118,7 +1135,7 @@ def skip_elements(elements):
 	return ___
 
 print(skip_elements(["a", "b", "c", "d", "e", "f", "g"])) # Should be ['a', 'c', 'e', 'g']
-print(skip_elements(['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach']))
+print(skip_elements(['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach'])) # Should be ['Orange', 'Strawberry', 'Peach']
 
 
 * Iterating Over Lists Using Enumerate:
@@ -1127,26 +1144,43 @@ When we covered for loops, we showed the example of iterating over a list. This 
 
 * Lists Comprehensions:
 
+multiples = []
+for x in range(1,11)
+  multiple.append(x*7)
 
+print(multiples)
 
+Explanation:
+creating lists based on sequences is such a common task Python provides a technique called list comprehension, that lets us do it in just one line. This is how we would do the same with list comprehension. Multiples =, we'll start the list, [ x * 7 for x in range(1,11)], and close the list. Print(multiples), it should be the same. List comprehensions let us create new lists based on sequences or ranges. So we can use this technique whenever we want to create a list based on a range like in this example. Or based on the contents of a list a tuple a string or any other Python sequence. The syntax tries to copy how you would express these concepts with natural language, although it can still be confusing sometimes. 
 
+Ex:
 
+languages = ["python", "perl", "ruby", "go", "java", "c"]
+lengths = [len(language) for language in languages]
+print(lenghths)
 
+Explanation:
+creating lists based on sequences is such a common task Python provides a technique called list comprehension, that lets us do it in just one line. This is how we would do the same with list comprehension. Multiples =, we'll start the list, [ x * 7 for x in range(1,11)], and close the list. Print(multiples), it should be the same. List comprehensions let us create new lists based on sequences or ranges. So we can use this technique whenever we want to create a list based on a range like in this example. Or based on the contents of a list a tuple a string or any other Python sequence. The syntax tries to copy how you would express these concepts with natural language, although it can still be confusing sometimes.
 
+EX2:
 
+z = [x for x in range (0,101) if x % 3 == 0]
+print(z)            # this prints multiples of 3 because the if condition states there should not be any remainder
 
+Say we wanted all the numbers that are divisible by 3 between 0 and a 100, we could create a list like this z = [x for x in range(0,101 ) if x module 3 == 0] print(z). In this case we just want the element x to be a part of the list, but we only want the numbers where the remainder of the division by 3 is 0. So we add the conditional clause after the range. Using list comprehensions when programming in Python is totally optional. 
 
+* QUESTION:
 
+The odd_numbers function returns a list of odd numbers between 1 and n, inclusively. Fill in the blanks in the function, using list comprehension. Hint: remember that list and range counters start at 0 and end at the limit minus 1.
 
+def odd_numbers(n):
+	return [x for x in ___ if ___]
 
-
-
-
-
-
-
-
-
+print(odd_numbers(5))  # Should print [1, 3, 5]
+print(odd_numbers(10)) # Should print [1, 3, 5, 7, 9]
+print(odd_numbers(11)) # Should print [1, 3, 5, 7, 9, 11]
+print(odd_numbers(1))  # Should print [1]
+print(odd_numbers(-1)) # Should print []
 
 * List Comprehensions Examples:
 
@@ -1532,7 +1566,6 @@ Pat is 35 years old and works as Lawyer
 Amanda is 25 years old and works as Engineer
 """
 ---
-
 # Dictionaries:
 
 
