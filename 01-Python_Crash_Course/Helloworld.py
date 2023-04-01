@@ -1,8 +1,2 @@
-def count_letters(text):
-    result = {}
-    for letter in text:
-        if letter not in result:
-            result[letter] = 0
-        result[letter] += 1
-    return result
-print(count_letters("why are people lazy ?"))
+ip_address = ["192.25.23", "192.23.45","8.8.8.8"]
+host_address = {"router": "192.25.23", "localhost": "192.23.45", "google":"8.8.8.8"}
